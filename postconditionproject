@@ -1,0 +1,45 @@
+note
+	description: "Postconditionproject application root class"
+	date: "$Date$"
+	revision: "$Revision$"
+
+
+class
+    APPLICATION
+
+create
+    make  -- This allows the creation of APPLICATION
+
+feature -- Access
+
+    output: INTEGER  -- Store the result of addition
+
+feature -- Initialization
+
+    make
+        -- Default initialization (no parameters).
+    do
+        output := 0  -- Initialize with a default value
+
+        -- Call the addition with sample values
+        add_numbers (5, 10)  -- Example: adding 5 and 10
+        print ("The result of adding 5 and 10 is: " + output.out + "%N")  -- Print the result
+    end
+
+    add_numbers (a, b: INTEGER)
+        -- Initialize the object with two integers.
+    do
+        add(a, b)
+    end
+
+feature -- Addition
+
+    add (a, b: INTEGER)
+        -- Add two integers and store the result.
+    do
+        output := a + b
+    ensure
+        output = a + b
+    end
+
+end
