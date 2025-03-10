@@ -1,0 +1,33 @@
+note
+	description: "Ifthenproject application root class"
+	date: "$Date$"
+	revision: "$Revision$"
+
+class
+	APPLICATION
+
+create
+   make
+
+feature
+   make
+      -- Run conditional example
+      local
+         age: INTEGER
+      do
+         age := 20
+         if age >= 18 then
+            io.put_string ("You are an adult.%N")
+         else
+            io.put_string ("You are not an adult.%N")
+         end
+
+         if age = 20 then
+            io.put_string ("You are 20 years old.%N")
+         elseif age > 20 then
+            io.put_string ("You are older than 20.%N")
+         else
+            io.put_string ("You are younger than 20.%N")
+         end
+      end
+end
