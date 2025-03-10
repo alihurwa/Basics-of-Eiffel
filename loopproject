@@ -1,0 +1,32 @@
+note
+	description: "Loopproject application root class"
+	date: "$Date$"
+	revision: "$Revision$"
+
+class
+   APPLICATION
+
+create
+   make
+
+feature
+   make
+      -- Example of using loops in Eiffel
+      local
+         i: INTEGER
+      do
+         -- Using a 'from-until-loop' to print numbers from 1 to 5
+         from
+            i := 1
+         until
+            i > 5
+         loop
+            io.put_integer (i)
+            io.put_string ("%N")  -- New line
+            i := i + 1
+         end
+
+         -- Using a 'from-until-loop' to print even numbers from 2 to 10
+      end
+end
+
