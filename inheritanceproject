@@ -1,0 +1,28 @@
+note
+	description: "inheritanceproject application root class"
+	date: "$Date$"
+	revision: "$Revision$"
+class
+    APPLICATION
+
+create
+    make  -- This allows the creation of APPLICATION
+
+feature -- Access
+
+    my_car: CAR  -- Store an instance of CAR
+
+feature -- Initialization
+
+    make
+        -- Default initialization (no parameters).
+    do
+        create my_car.car_make("Toyota", "Corolla", 4)  -- Create a CAR instance
+        my_car.display_car_info  -- Display information about the car
+
+        -- Wait for user input to keep console open
+        print ("Press Enter to exit...%N")
+        io.read_line  -- Wait for user to press Enter
+    end
+
+end
