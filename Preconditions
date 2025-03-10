@@ -1,0 +1,30 @@
+note
+	description: "Summary description for {CONDITION}."
+	author: ""
+	date: "$Date$"
+	revision: "$Revision$"
+
+class
+	CONDITION
+
+create
+	make
+
+feature {NONE} -- Initialization to features within this block
+
+	make
+			-- Run application.Its the main execution
+		local  --exist only within the method
+			some_value: INTEGER
+		do
+			-- Initialize the variable
+			some_value := 10
+
+			if some_value >= 0 then  --  precondition check
+				print ("Application is running with some_value: " + some_value.out + "%N")
+			else
+				print ("Error: some_value must be non-negative.%N")
+			end
+		end
+
+end
